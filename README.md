@@ -1,4 +1,4 @@
-# Bedisynk - Minecraft Bedrock Edition Discord連携アドオン
+# Bedisynk - Minecraft統合版サーバー Discord連携アドオン
 
 Minecraft Bedrock EditionサーバーとDiscordを連携させる高度なアドオンです。BAN管理機能、レート制限対策、安定した通信を実現します。
 

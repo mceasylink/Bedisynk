@@ -87,7 +87,7 @@ server/
    - bedisynk-v1.x.zipを解凍し、bedisynk-v1.xというフォルダを表示します。(フォルダ名のバージョンは気にしない)
    - bedisynk-v1.xというフォルダを(マイクラサーバー)/worlds/(ワールドのファイル名)/behavior_packs/以降に移動させます。
 ```
-マイクラサーバー/
+server/
 └── worlds/
     └── ワールドのファイル名/
         └── behavior_packs/
@@ -126,6 +126,15 @@ server/
 
 7. **サーバーへの導入**
    - `mcbe.js`をサーバーのscriptsフォルダに配置
+```
+server/
+└── worlds/
+    └── ワールドのファイル名/
+        └── behavior_packs/
+            └── bedisynk-v1.x/
+                └── scripts/
+                    └── mcbe.js
+```
    - サーバーを再起動
 
 ## 🔧 設定

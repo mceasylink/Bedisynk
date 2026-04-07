@@ -90,18 +90,20 @@ server/
             └── bedisynk-v1.x/
                 └── ...
 ```
-⑤ bedisynk-v1.x.zipを削除します。
+   - bedisynk-v1.x.zipを削除します。
 
 このような感じで導入できると思います。
    
 2. **Discord Botの作成**
    - [Discord Developer Portal](https://discord.com/developers/applications)で新しいアプリケーションを作成
    - Botを作成し、トークンを取得
-   - 以下の権限を付与:
-     - `Send Messages`
-     - `Read Message History`
-     - `Embed Links`
-     - `Use Slash Commands`
+   - Botタブへ移動し、Presence Intent・Server Members Intent・Message Content Intentを有効化
+   - OAuth2タブへ移動し、OAuth2 URLジェネレーターで以下の権限を付与:
+     - `メッセージを送信`
+     - `メッセージ履歴を読む`
+     - `埋め込みリンク`
+     - `スラッシュコマンドを使用`
+   - ＊管理者権限でもよい    
 
 4. **チャンネル設定**
    - メイン通知用チャンネルを作成（IDを取得）

@@ -94,7 +94,7 @@ server/
 
 このような感じで導入できると思います。
    
-2. **Discord Botの作成**
+4. **Discord Botの作成**
    - [Discord Developer Portal](https://discord.com/developers/applications)で新しいアプリケーションを作成
    - Botを作成し、トークンを取得
    - Botタブへ移動し、Presence Intent・Server Members Intent・Message Content Intentを有効化
@@ -103,14 +103,15 @@ server/
      - `メッセージ履歴を読む`
      - `埋め込みリンク`
      - `スラッシュコマンドを使用`
-   - ＊管理者権限でもよい    
+    ＊管理者権限でもよい
+   - 生成されたURLをコピーしてアクセスし、Botを連携するサーバーへ招待
 
-4. **チャンネル設定**
+5. **チャンネル設定**
    - メイン通知用チャンネルを作成（IDを取得）
    - チャット連携用チャンネルを作成（IDを取得）
    - 管理者用チャンネルを作成（IDを取得）
 
-5. **アドオン設定**
+6. **アドオン設定**
    ```javascript
    // 設定値を実際の値に置き換え
    const channelID = "メイン通知チャンネルID";
@@ -119,8 +120,8 @@ server/
    const botToken = "Botトークン";
    ```
 
-6. **サーバーへの導入**
-   - `mcbe.js`をサーバーのbehavior_packsフォルダに配置
+7. **サーバーへの導入**
+   - `mcbe.js`をサーバーのscriptsフォルダに配置
    - サーバーを再起動
 
 ## 🔧 設定

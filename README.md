@@ -23,10 +23,35 @@ Minecraft Bedrock EditionサーバーとDiscordを連携させる高度なアド
 - Minecraft Bedrock Edition サーバー
 - Discord サーバー管理権限
 - Bot トークン
+- Minecraft統合版
 
 ### インストール手順
 
-1. **Discord Botの作成**
+1. **ワールドデータ移動**
+   - サーバー内のデータを統合版クライアントへ移動させます。
+   - サーバーのワールドデータの場所
+```
+server/
+└── worlds/
+    └── ワールドのフォルダ名
+```
+   - 統合版クライアントのワールドデータの場所(Windows)
+```
+c:/
+└── Users/
+    └── PCのユーザー名/
+        └── AppData/
+            └── Roaming /
+                └── Minecraft Bedrock/
+                    └── Users/
+                        └── ユーザーID(数字)/
+                            └── games/
+                                └── com.mojang/
+                                    └── minecraftWorlds
+　　　　　　　　　　　　　　　　　　　　　　　 　　└── ワールドのフォルダ名
+```
+
+2. **Discord Botの作成**
    - [Discord Developer Portal](https://discord.com/developers/applications)で新しいアプリケーションを作成
    - Botを作成し、トークンを取得
    - 以下の権限を付与:
@@ -35,12 +60,12 @@ Minecraft Bedrock EditionサーバーとDiscordを連携させる高度なアド
      - `Embed Links`
      - `Use Slash Commands`
 
-2. **チャンネル設定**
+4. **チャンネル設定**
    - メイン通知用チャンネルを作成（IDを取得）
    - チャット連携用チャンネルを作成（IDを取得）
    - 管理者用チャンネルを作成（IDを取得）
 
-3. **アドオン設定**
+5. **アドオン設定**
    ```javascript
    // 設定値を実際の値に置き換え
    const channelID = "メイン通知チャンネルID";
@@ -49,7 +74,7 @@ Minecraft Bedrock EditionサーバーとDiscordを連携させる高度なアド
    const botToken = "Botトークン";
    ```
 
-4. **サーバーへの導入**
+6. **サーバーへの導入**
    - `mcbe.js`をサーバーのbehavior_packsフォルダに配置
    - サーバーを再起動
 
@@ -132,7 +157,7 @@ const RATE_LIMIT_CONFIG = {
 - メモリ使用量の最適化
 
 ### 推奨環境
-- Minecraft Bedrock Edition 1.21+
+- Minecraft Bedrock Edition 1.26+
 - 安定したインターネット接続
 - 十分なメモリ容量
 

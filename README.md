@@ -30,13 +30,13 @@ Minecraft Bedrock EditionサーバーとDiscordを連携させる高度なアド
 1. **ワールドデータ移動**
    - 統合版サーバーのみではBetaAPIを有効化できない為、サーバー内のデータを統合版クライアントへ移動させます。
      
-   - サーバーのワールドデータの場所
+サーバーのワールドデータの場所
 ```
 server/
 └── worlds/
     └── ワールドのフォルダ名
 ```
-   - 統合版クライアントのワールドデータの場所(Windows)
+統合版クライアントのワールドデータの場所(Windows)
 ```
 c:/
 └── Users/
@@ -63,7 +63,7 @@ server/
     └── default/
         └── permissions.json
 ```
-   - 置き換えるコード
+置き換えるコード
 ```
 {
   "allowed_modules": [
@@ -74,10 +74,28 @@ server/
     "@minecraft/server-editor",
     "@minecraft/server-net"
   ]
-}
-                                        
+}                                       
 ```
-     
+3.1. ＊/Bedisynk/scripts/index.jsが出てこない場合
+
+その場合、もう一度アドオンを導入する必要があります。
+
+① サーバー内にbedisynk-v1.x.mcaddonをアップロードします。
+② bedisynk-v1.x.mcaddonの拡張子をzipに変更します。(bedisynk-v1.x.zip)
+③ bedisynk-v1.x.zipを解凍し、bedisynk-v1.xというフォルダを表示します。(フォルダ名のバージョンは気にしない)
+④ bedisynk-v1.xというフォルダを(マイクラサーバー)/worlds/(ワールドのファイル名)/behavior_packs/以降に移動させます。
+```
+マイクラサーバー/
+└── worlds/
+    └── ワールドのファイル名/
+        └── behavior_packs/
+            └── bedisynk-v1.x/
+                └── ...
+```
+⑤ bedisynk-v1.x.zipを削除します。
+
+このような感じで導入できると思います。
+   
 2. **Discord Botの作成**
    - [Discord Developer Portal](https://discord.com/developers/applications)で新しいアプリケーションを作成
    - Botを作成し、トークンを取得

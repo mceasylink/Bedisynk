@@ -23,7 +23,7 @@ Minecraft Bedrock EditionサーバーとDiscordを連携させる高度なアド
 - Minecraft Bedrock Edition サーバー
 - Discord サーバー管理権限
 - Bot トークン
-- Minecraft統合版
+- Minecraft統合版クライアント
 
 ### インストール手順
 
@@ -42,7 +42,7 @@ server/
 ```
 統合版クライアントのワールドデータの場所(Windows)
 ```
-c:/
+C:/
 └── Users/
     └── PCのユーザー名/
         └── AppData/

@@ -28,7 +28,8 @@ Minecraft Bedrock EditionサーバーとDiscordを連携させる高度なアド
 ### インストール手順
 
 1. **ワールドデータ移動**
-   - サーバー内のデータを統合版クライアントへ移動させます。
+   - 統合版サーバーのみではBetaAPIを有効化できない為、サーバー内のデータを統合版クライアントへ移動させます。
+     
    - サーバーのワールドデータの場所
 ```
 server/
@@ -50,7 +51,33 @@ c:/
                                     └── minecraftWorlds
 　　　　　　　　　　　　　　　　　　　　　　　 　　└── ワールドのフォルダ名
 ```
+2. **BetaAPIの有効化**
+   - 統合版クライアントを起動し、ワールド一覧からサーバーのワールドを選択、「実験」からBetaAPIを有効化しエクスポートします。
+   - エクスポートしたら拡張子を.mcworldから.zipへ変更し、サーバーのworlds以降の部分にアップロードし解凍します。その後zipファイルは削除しても構いません。
 
+3. **サーバー内でのAPIの有効化**
+   - 以下のファイルを、下記にあるコードへ置き換えてください。
+```
+server/
+└── config/
+    └── default/
+        └── permissions.json
+```
+   - 置き換えるコード
+```
+{
+  "allowed_modules": [
+    "@minecraft/server-gametest",
+    "@minecraft/server",
+    "@minecraft/server-ui",
+    "@minecraft/server-admin",
+    "@minecraft/server-editor",
+    "@minecraft/server-net"
+  ]
+}
+                                        
+```
+     
 2. **Discord Botの作成**
    - [Discord Developer Portal](https://discord.com/developers/applications)で新しいアプリケーションを作成
    - Botを作成し、トークンを取得

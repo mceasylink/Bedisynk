@@ -77,13 +77,11 @@ server/
 }                                       
 ```
 3.1. ＊/Bedisynk/scripts/index.jsが出てこない場合
-
 その場合、もう一度アドオンを導入する必要があります。
-
-① サーバー内にbedisynk-v1.x.mcaddonをアップロードします。
-② bedisynk-v1.x.mcaddonの拡張子をzipに変更します。(bedisynk-v1.x.zip)
-③ bedisynk-v1.x.zipを解凍し、bedisynk-v1.xというフォルダを表示します。(フォルダ名のバージョンは気にしない)
-④ bedisynk-v1.xというフォルダを(マイクラサーバー)/worlds/(ワールドのファイル名)/behavior_packs/以降に移動させます。
+   - サーバー内にbedisynk-v1.x.mcaddonをアップロードします。
+   - bedisynk-v1.x.mcaddonの拡張子をzipに変更します。(bedisynk-v1.x.zip)
+   - bedisynk-v1.x.zipを解凍し、bedisynk-v1.xというフォルダを表示します。(フォルダ名のバージョンは気にしない)
+   - bedisynk-v1.xというフォルダを(マイクラサーバー)/worlds/(ワールドのファイル名)/behavior_packs/以降に移動させます。
 ```
 マイクラサーバー/
 └── worlds/

@@ -46,7 +46,7 @@ C:/
 └── Users/
     └── PCのユーザー名/
         └── AppData/
-            └── Roaming /
+            └── Roaming/
                 └── Minecraft Bedrock/
                     └── Users/
                         └── ユーザーID(数字)/
@@ -55,6 +55,7 @@ C:/
                                     └── minecraftWorlds
 　　　　　　　　　　　　　　　　　　　　　　　 　　└── ワールドのフォルダ名
 ```
+
 2. **BetaAPIの有効化**
    - 統合版クライアントを起動し、ワールド一覧からサーバーのワールドを選択、「実験」からBetaAPIを有効化しエクスポートします。
    - エクスポートしたら拡張子を.mcworldから.zipへ変更し、サーバーのworlds以降の部分にアップロードし解凍します。その後zipファイルは削除しても構いません。
